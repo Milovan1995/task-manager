@@ -23,7 +23,7 @@ const NewTask = () => {
   const todaysDate = new Date().toLocaleDateString();
 
   return (
-    <div className="new-task-container">
+    <div className="task-list-container">
       <h2 className="new-task-heading">Tasks for {todaysDate}</h2>
       <TaskList tasks={tasks} />
       <div className="new-task-form">
