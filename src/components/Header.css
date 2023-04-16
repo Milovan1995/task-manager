@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.header-container {
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+ }
+  
+  .header-title {
+    color: white;
+    display: block;
+    font-size: 4rem;
+    margin: 0;
+    font-family: cursive;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  

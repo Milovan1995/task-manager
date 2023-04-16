@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./components/Header";
-import TaskList from "./components/TaskList";
+import NewTask from "./components/NewTask";
 
 const App = () => {
   return (
-    <div>
+    <div className="app-container">
       <Header/>
-      <TaskList/>
+      <NewTask/>
     </div>
   );
 };
