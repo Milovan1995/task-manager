@@ -6,4 +6,15 @@
     margin-top: 20px;
     font-size: 1.1rem;
   }
-  
+
+.tasks-and-input-container {
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+li {
+  font-family: Arial,sans-serif;
+  font-size: 1.4rem;
+}

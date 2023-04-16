@@ -25,16 +25,18 @@ const NewTask = () => {
   return (
     <div className="task-list-container">
       <h2 className="new-task-heading">Tasks for {todaysDate}</h2>
-      <TaskList tasks={tasks} />
-      <div className="new-task-form">
-        <input
-          placeholder="Add Task"
-          value={textVar}
-          onChange={(e) => setTextVar(e.target.value)}
-        />
-        <button className="new-task-button" onClick={addingTask}>
-          Add
-        </button>
+      <div className = "tasks-and-input-container">
+        <TaskList tasks={tasks} />
+        <div className="new-task-form">
+          <input
+            placeholder="Add Task"
+            value={textVar}
+            onChange={(e) => setTextVar(e.target.value)}
+          />
+          <button className="new-task-button" onClick={addingTask}>
+            Add
+          </button>
+        </div>
       </div>
     </div>
   );

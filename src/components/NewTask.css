@@ -17,14 +17,7 @@ body {
     align-items: center;
   }
   
-  .new-task-form {
-    position: absolute;
-  bottom: 340px;
-  left: 50%;
-  transform: translateX(50%);
-  margin-top: 2rem;
-
-  }
+  
   
   .new-task-form input {
     background-color: #c6c3cc;
