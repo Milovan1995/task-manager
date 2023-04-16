@@ -14,19 +14,33 @@ const NewTask = () => {
         {
           name: textVar.trim(),
           id: new Date().getTime(),
+          completed: false, // set initial completed value to false
         },
       ]);
       setTextVar("");
     }
   };
 
+  const toggleTask = (taskId) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          completed: !task.completed,
+        };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  };
+
   const todaysDate = new Date().toLocaleDateString();
 
   return (
     <div className="task-list-container">
-      <h2 className="new-task-heading">Tasks for {todaysDate}</h2>
-      <div className = "tasks-and-input-container">
-        <TaskList tasks={tasks} />
+      <h2 className="new-task-heading">To do list for {todaysDate}</h2>
+      <div className="tasks-and-input-container">
+        <TaskList tasks={tasks} toggleTask={toggleTask} />
         <div className="new-task-form">
           <input
             placeholder="Add Task"
