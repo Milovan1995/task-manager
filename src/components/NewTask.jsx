@@ -6,7 +6,7 @@ import "./NewTask.css";
 const NewTask = () => {
   const [tasks, setTasks] = useState(EveryDayTasks);
   const [textVar, setTextVar] = useState("");
-
+// adding a task to Task list and making sure user doesn't accidentaly submit white space to the list (therefor trim)
   const addingTask = () => {
     if (textVar.trim() !== "") {
       setTasks([
@@ -20,7 +20,7 @@ const NewTask = () => {
       setTextVar("");
     }
   };
-
+// checking and unchecking items on tasklist with boolean variable
   const toggleTask = (taskId) => {
     const updatedTasks = tasks.map((task) => {
       if (task.id === taskId) {
@@ -33,11 +33,25 @@ const NewTask = () => {
     });
     setTasks(updatedTasks);
   };
-
+// deleting tasks from the task list
   const deleteTask = (taskId) => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
   };
+  // editing tasks from task list
+  const editTask = (taskId, newName) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          name: newName,
+        };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  };
+  
 
   const todaysDate = new Date().toLocaleDateString();
 
@@ -45,7 +59,7 @@ const NewTask = () => {
     <div className="task-list-container">
       <h2 className="new-task-heading">To do list for {todaysDate}</h2>
       <div className="tasks-and-input-container">
-        <TaskList tasks = {tasks} toggleTask = {toggleTask} deleteTask = {deleteTask}/>
+        <TaskList tasks = {tasks} toggleTask = {toggleTask} deleteTask = {deleteTask} editTask = {editTask}/>
         <div className="new-task-form">
           <input
             placeholder="Add Task"
