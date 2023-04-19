@@ -34,13 +34,18 @@ const NewTask = () => {
     setTasks(updatedTasks);
   };
 
+  const deleteTask = (taskId) => {
+    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(updatedTasks);
+  };
+
   const todaysDate = new Date().toLocaleDateString();
 
   return (
     <div className="task-list-container">
       <h2 className="new-task-heading">To do list for {todaysDate}</h2>
       <div className="tasks-and-input-container">
-        <TaskList tasks={tasks} toggleTask={toggleTask} />
+        <TaskList tasks = {tasks} toggleTask = {toggleTask} deleteTask = {deleteTask}/>
         <div className="new-task-form">
           <input
             placeholder="Add Task"
