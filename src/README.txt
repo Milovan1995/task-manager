@@ -9,5 +9,5 @@ This is a simple task list app built with React.
 
 ## Usage
 
-To start the app, run the following command:
-
+To start the app, make sure to cd into the directory where the project is and run the command:
+npm start
