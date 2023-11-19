@@ -6,7 +6,6 @@ import "./NewTask.css";
 const NewTask = () => {
   const [tasks, setTasks] = useState(EveryDayTasks);
   const [textVar, setTextVar] = useState("");
-// adding a task to Task list and making sure user doesn't accidentaly submit white space to the list (therefor trim)
   const addingTask = () => {
     if (textVar.trim() !== "") {
       setTasks([
@@ -20,7 +19,7 @@ const NewTask = () => {
       setTextVar("");
     }
   };
-// checking and unchecking items on tasklist with boolean variable
+// checking and unchecking items on tasklist
   const toggleTask = (taskId) => {
     const updatedTasks = tasks.map((task) => {
       if (task.id === taskId) {
