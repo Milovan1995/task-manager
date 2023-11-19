@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 
 const TaskList = ({ tasks, toggleTask, deleteTask, editTask }) => {
-// 2 useState to control which task is being Edited and if its being edited, and what to
   const [editingTaskId, setEditingTaskId] = useState(null);
   const [editedTaskName, setEditedTaskName] = useState("");
 
