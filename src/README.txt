@@ -1,6 +1,6 @@
-# My Task List App
+My Task List App
 
-This is a simple task list app built with React.
+This is a simple task list app built with React. One of the starting projects used for representing knowledge of basic React principles.
 
 ## Installation
 
@@ -11,3 +11,4 @@ This is a simple task list app built with React.
 
 To start the app, make sure to cd into the directory where the project is and run the command:
 npm start
+
