@@ -66,7 +66,7 @@ const NewTask = () => {
             onChange={(e) => setTextVar(e.target.value)}
           />
           <button className="new-task-button" onClick={addingTask}>
-            Add
+            Add Task
           </button>
         </div>
       </div>
